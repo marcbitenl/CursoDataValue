@@ -1,0 +1,9 @@
+{
+	"name": "df-cursodatavalue",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "18b0d3d4-ca11-4858-bd38-8ce1ecfca306",
+		"tenantId": "793619bc-d34f-40bc-a6ca-13de932ecb91"
+	}
+}
