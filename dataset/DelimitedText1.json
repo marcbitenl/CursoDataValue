@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "teste aula2.csv",
-				"folderPath": "academyaula1",
+				"fileName": "tb_olist_orders.csv",
+				"folderPath": "landing-zone/sql-dvacademy/tb_olist_orders",
 				"container": "dev"
 			},
 			"columnDelimiter": ",",
