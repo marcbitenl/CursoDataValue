@@ -57,19 +57,89 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "BronzeLayer",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "ExtracaoSQL",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/marcbitenl@gmail.com/imersao-engdados-sql/sql-dvacademy/tb_olist_orders_itens/bronze-olist-order_items"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "SilverLayer",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "BronzeLayer",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/marcbitenl@gmail.com/imersao-engdados-sql/sql-dvacademy/tb_olist_orders_itens/silver-olist_order_items"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "GoldLayer",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "SilverLayer",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/marcbitenl@gmail.com/imersao-engdados-sql/sql-dvacademy/tb_olist_orders_itens/gold-olist_order_items"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
-		"parameters": {
-			"par_diretorio": {
-				"type": "string"
-			},
-			"par_nomearquivo": {
-				"type": "string"
-			},
-			"par_container": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
