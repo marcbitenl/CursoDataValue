@@ -53,7 +53,7 @@
 						"referenceName": "DelimitedText1",
 						"type": "DatasetReference",
 						"parameters": {
-							"par_nomearquivo": "tb_olist_orders.csv",
+							"par_nomearquivo": "tb_olist_orders_items.csv",
 							"par_diretorio": "landing-zone/sql-dvacademy/tb_olist_order_items",
 							"par_container": "dev"
 						}
