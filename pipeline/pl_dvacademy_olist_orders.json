@@ -204,7 +204,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/marcbitenl@gmail.com/imersao-engdados-sql/sql-dvacademy/tb_olist_orders/bronze-olist-orders"
+					"notebookPath": "/Users/marcbitenl@gmail.com/imersao-engdados-sql/sql-dvacademy/tb_olist_orders_itens/silver-olist_order_items"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
